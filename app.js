@@ -37,7 +37,6 @@ function sendRequestOnAction() {
         
         li.textContent = result.candidates[0].content.parts[0].text;
         
-        
         //Must convert a markdown into html before continuing the message
         messageOutput.appendChild(li);
 
