@@ -11,14 +11,16 @@
   <div class="card">
     <div class="chat-header">Chat</div>
       <div class="chat-window">
-        <ul class="message-list" id="txtChatOutput"></ul>
+        <div class="message-list" id="txtChatOutput"></div>
       </div>
       <div class="chat-input">
           <input type="text" class="message-input" placeholder="Type your message here" id="txtUserInput">
           <button class="send-button" onclick="sendRequestOnAction()">Send</button>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/showdown@<version tag>/dist/showdown.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.10/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.17/dist/purify.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

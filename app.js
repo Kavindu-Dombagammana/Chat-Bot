@@ -2,11 +2,8 @@ function sendRequestOnAction() {
     const message = document.getElementById("txtUserInput").value;
     const messageOutput = document.getElementById("txtChatOutput");
     const myHeaders = new Headers();
-    const li = document.createElement('li');
 
-    const txt = document.createElement('txt');
-    txt.textContent = message;
-    messageOutput.appendChild(txt);
+    document.getElementById("txtChatOutput").innerHTML = `<div>${message}</div><br>`;
     
 
     myHeaders.append("Content-Type", "application/json");
@@ -35,10 +32,7 @@ function sendRequestOnAction() {
     .then((response) => response.json())
     .then((result) => {
         
-        li.textContent = result.candidates[0].content.parts[0].text;
-        
-        //Must convert a markdown into html before continuing the message
-        messageOutput.appendChild(li);
+        document.getElementById("txtChatOutput").innerHTML = `<div>${DOMPurify.sanitize(marked.parse(result.candidates[0].content.parts[0].text))}</div><br>`;
 
     })
     .catch((error) => console.error(error));
