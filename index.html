@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CatBot</title>
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-
+    <!-- From Uiverse.io by ahmed150up --> 
+  <div class="card">
+    <div class="chat-header">Chat</div>
+      <div class="chat-window">
+        <ul class="message-list" id="txtChatOutput"></ul>
+      </div>
+      <div class="chat-input">
+          <input type="text" class="message-input" placeholder="Type your message here" id="txtUserInput">
+          <button class="send-button" onclick="sendRequestOnAction()">Send</button>
+      </div>
+    </div>
+    <script src="  https://cdnjs.cloudflare.com/ajax/libs/showdown/<version tag>/showdown.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
